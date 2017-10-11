@@ -12,6 +12,7 @@ WORKDIR /usr/src/app
 RUN bundle install
 
 COPY start.sh .
+RUN chmod +x start.sh
 
 EXPOSE 3000
 CMD ./start.sh
