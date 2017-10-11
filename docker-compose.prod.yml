@@ -1,0 +1,14 @@
+version: "2"
+
+services:
+  app:
+    image: school_slider
+    environment:
+      RAILS_ENV: production
+      RAILS_SERVE_STATIC_FILES: true
+    volumes:
+      - /mnt/docker/school_slider/db/production:/usr/src/app/db/production
+      - /mnt/docker/school_slider/public/system:/usr/src/app/public/system
+    ports:
+      - "3000:3000"
+
