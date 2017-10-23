@@ -9,6 +9,7 @@ WORKDIR /usr/src
 RUN git clone https://github.com/loupnunux/rails-SchoolSlider.git app
 
 WORKDIR /usr/src/app
+RUN git pull
 RUN bundle install
 
 COPY start.sh .
